@@ -430,7 +430,7 @@ if (isset($_SESSION['module']) && $_SESSION['module'] == 'Membership') {
                 $notification_message .= ' Invalid File format. Only JPG, JPEG and PNG files allowed. <br/>';
             }
 
-            $passport = $_SESSION['mem_reference'] . "." . $fileExtension;
+            $passport = $_SESSION['mem_reference'].$utility->generateRandomString(6). "." . $fileExtension;
             // directory in which the uploaded file will be moved
             $dir = '../storage/passport/';
             $dest_path = $dir . $passport;
