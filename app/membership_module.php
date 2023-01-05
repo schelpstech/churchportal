@@ -439,7 +439,6 @@ if (isset($_SESSION['module']) && $_SESSION['module'] == 'Membership') {
         }
 
         if (move_uploaded_file($fileTmpPath, $dest_path)) {
-            $new_passport = base64_encode($_FILES['passport']);
             //Update new Passport Name
             $member_data = array(
                 'passport' => $passport,
