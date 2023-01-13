@@ -175,23 +175,23 @@
                 </li>
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-sitemap"></i>
+                        <i class="nav-icon fas fa-video"></i>
                         <p>
-                            Activity Records
+                            Church Sermons 
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../UI/general.html" class="nav-link">
+                            <a href="../../app/router.php?pageid=<?php echo base64_encode('add_sermon');?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>New Activity</p>
+                                <p>New Sermon</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../UI/icons.html" class="nav-link">
+                            <a href="../../app/router.php?pageid=<?php echo base64_encode('sermon_repo');?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Activity Log</p>
+                                <p>Sermon Repository</p>
                             </a>
                         </li>
                         <li class="nav-item">

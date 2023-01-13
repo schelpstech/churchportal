@@ -70,9 +70,9 @@ include '../include/aside.php';
             
             //Ministers Title
             elseif($_SESSION['pageid'] == 'manage_title') {
-                    include './forms/manage_title.php';
+                include './forms/manage_title.php';
             }elseif ($_SESSION['pageid'] == 'modify_title') {
-            include './forms/modify_title.php';
+                include './forms/modify_title.php';
             }
 
 
@@ -84,9 +84,18 @@ include '../include/aside.php';
             }elseif ($_SESSION['pageid'] == 'modify_sow') {
                 include './forms/modify_sow.php';
             }
-            
             elseif ($_SESSION['pageid'] == 'portal_dashboard') {
                 include './dashboard.php';
+            }
+
+
+            //Sermon Manager
+            elseif ($_SESSION['pageid'] == 'add_sermon') {
+                include './forms/add_sermon.php';
+            }elseif ($_SESSION['pageid'] == 'sermon_repo') {
+                include './report/sermon_manager.php';
+            }elseif ($_SESSION['pageid'] == 'modify_sermon') {
+                include './forms/modify_sermon.php';
             }
         ?>
         </div>

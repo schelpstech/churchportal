@@ -156,4 +156,26 @@ if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'manage_visitor'
     $_SESSION['mem_reference'] = base64_decode($_GET['mem_reference']);
     $model->redirect('../view/pages/viewer.php');
   }
+
+  //Sermon Manager
+
+  if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'add_sermon') {
+    $_SESSION['pageid'] = 'add_sermon';
+    $_SESSION['page_name'] = 'Add New Sermon ';
+    $_SESSION['module'] = 'Sermon Manager';
+    $model->redirect('../view/pages/viewer.php');
+  }
+  if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'sermon_repo') {
+    $_SESSION['pageid'] = 'sermon_repo';
+    $_SESSION['page_name'] = 'Sermon Repository ';
+    $_SESSION['module'] = 'Sermon Manager';
+    $model->redirect('../view/pages/viewer.php');
+  }
+if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'modify_sermon') {
+  $_SESSION['pageid'] = 'modify_sermon';
+  $_SESSION['page_name'] = 'Modify Sermon Details';
+  $_SESSION['module'] = 'Sermon Manager';
+  $_SESSION['sermon_reference'] = base64_decode($_GET['sermon_reference']);
+  $model->redirect('../view/pages/viewer.php');
+}
 ?>

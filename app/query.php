@@ -302,3 +302,31 @@ if(isset($_SESSION['visitor_reference'])){
     );
     $selected_visitor = $model->getRows($tblName, $conditions);   
 }
+
+//Select All Sermons
+$tblName = 'sermon_repo_tbl';
+$conditions = array(
+    'order_by' => 'sermon_rectime DESC',
+    'joinl' => array(
+        'assembly_tbl' => ' on sermon_repo_tbl.assembly_id = assembly_tbl.assembly_id',
+    ),
+);
+$sermon_list = $model->getRows($tblName, $conditions);
+
+
+if(isset($_SESSION['sermon_reference'])){
+//Select Referenced Sermon
+$tblName = 'sermon_repo_tbl';
+$conditions = array(
+    'where' => array(
+        'sermon_id' => $_SESSION['sermon_reference'],
+    ),
+    'return_type' => 'single',
+    'joinl' => array(
+        'assembly_tbl' => ' on sermon_repo_tbl.assembly_id = assembly_tbl.assembly_id',
+    ),
+);
+$selected_sermon = $model->getRows($tblName, $conditions);
+}
+
+
