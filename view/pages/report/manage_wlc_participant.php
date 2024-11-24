@@ -19,7 +19,7 @@
                                     <th>Church</th>
                                     <th>Contact</th>
                                     <th>Remarks</th>
-                                    <th>Attendance</th>
+                                    <th>Attendance Status</th>
                                 </tr>
                             </thead>
                             <tbody>
