@@ -97,6 +97,11 @@ include '../include/aside.php';
             }elseif ($_SESSION['pageid'] == 'modify_sermon') {
                 include './forms/modify_sermon.php';
             }
+
+            //WLC Participant
+            elseif ($_SESSION['pageid'] == 'manage_wlc_participant') {
+                include './report/manage_wlc_participant.php';
+            }
         ?>
         </div>
     </section>
