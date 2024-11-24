@@ -146,6 +146,23 @@
                 </li>
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-video"></i>
+                        <p>
+                            WLC
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="../../app/router.php?pageid=<?php echo base64_encode('manage_wlc_participant');?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage WLC Participant</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-sitemap"></i>
                         <p>
                             Workforce Module
