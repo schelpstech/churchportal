@@ -71,6 +71,13 @@ $conditions = array(
 );
 $member_list = $model->getRows($tblName, $conditions);
 
+//Select All Registered Partcipants for WLC
+$tblName = 'registrations';
+$conditions = array(
+    'order_by' => 'created_at DESC',
+);
+$participant_list = $model->getRows($tblName, $conditions);
+
 //Select Referenced Member
 if(isset($_SESSION['mem_reference'])){
 $tblName = 'member_list';
