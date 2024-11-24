@@ -178,4 +178,15 @@ if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'modify_sermon')
   $_SESSION['sermon_reference'] = base64_decode($_GET['sermon_reference']);
   $model->redirect('../view/pages/viewer.php');
 }
+
+
+//WLC Registration
+
+if (isset($_GET['pageid']) && base64_decode($_GET['pageid']) == 'manage_wlc_participant') {
+  $_SESSION['pageid'] = 'manage_wlc_participant';
+  $_SESSION['page_name'] = 'Manage WLC Participants Information';
+  $_SESSION['module'] = 'WLC';
+  $model->redirect('../view/pages/viewer.php');
+}
+
 ?>
